@@ -1,0 +1,159 @@
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #0f172a; /* Muy oscuro, casi negro-azulado */
+      color: #f1f5f9;             /* Texto claro (gris muy claro) */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+      gap: 2rem;                      /* Espacio entre columnas */
+      width: 100%;
+      max-width: 1200px;              /* Ancho máximo de la sección central */
+    }
+
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding-right: 1rem;
+    }
+
+    .left-panel h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .left-panel p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #e2e8f0; /* Gris claro más suave */
+    }
+
+    .left-panel ul {
+      margin-top: 1rem;
+      list-style: disc inside;
+      color: #e2e8f0;
+    }
+
+    .left-panel li {
+      margin-bottom: 0.5rem;
+    }
+
+    .right-panel {
+      background-color: #ffffff; /* Card: fondo claro */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-panel h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #1f2937; /* Gris oscuro para el título del card */
+      margin-bottom: 1rem;
+    }
+
+    /* Botón “Conectar Serial” dentro del card */
+    .right-panel button {
+      margin-bottom: 1.25rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #2563eb;  /* Azul moderado */
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 2px solid #2563eb;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .right-panel button:hover {
+      background-color: #1e40af; /* Azul más oscuro al pasar el cursor */
+      border-color: #1e40af;
+    }
+
+    /* Contenedor de Processing.js */
+    .viewer-card {
+      width: 100%;
+      max-width: 700px; /* Limita el ancho del canvas + GIF */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Canvas de Processing */
+    .viewer-card canvas {
+      background-color: #f9fafb;    /* Fondo muy claro para resaltar sketch */
+      border: 1px solid #d1d5db;    /* Borde gris muy suave */
+      border-radius: 4px;
+    }
+
+    /* GIF de demostración */
+    .gif-demo {
+      width: 100%;
+      max-width: 320px;
+      border: 1px solid #d1d5db;    /* Borde gris muy suave */
+      border-radius: 4px;
+      background-color: #f9fafb;
+    }
+
+    .gif-caption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #4b5563; /* Gris medio para la leyenda */
+      text-align: center;
+    }
+
+    /* Área de logs */
+    .log-panel {
+      margin-top: 1.5rem;
+      width: 100%;
+      max-width: 700px;
+      background-color: #f9fafb;
+      color: #1f2937;
+      font-family: 'Roboto', monospace;
+      font-size: 0.875rem;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      height: 160px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 800px) {
+      .main-container {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+      }
+      .right-panel {
+        margin-top: 2rem;
+      }
+    }

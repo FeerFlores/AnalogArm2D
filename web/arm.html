@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Analogic Arm 2D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/arm.css">
+  <script src="https://cdn.jsdelivr.net/gh/processing-js/processing-js@master/processing.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="main-container">
+    <div class="left-panel">
+      <h1 align="center">Dual MCU + Joystick</h1>
+      <p>
+        Este proyecto muestra un sketch de Processing donde se visualiza en
+        tiempo real el movimiento de un brazo según la posición del joystick
+        conectado a la tarjeta de desarrollo Dual MCU.
+      </p>
+
+        <img src="11.gif" alt="Demostración de uso" class="gif-demo"/>
+
+        <div class="gif-caption">🎞️ Demostración visual del modelo girando</div>
+
+    </div>
+
+    <div class="right-panel">
+      <h2>Interfaz en Vivo</h2>
+      <button id="btnConnect">Conectar Serial</button>
+
+      <!-- Contenedor que agrupa canvas + logs -->
+      <div class="viewer-card">
+        <!-- Canvas donde se cargará Processing (arm.pde) -->
+        <canvas
+          id="canvas1"
+          width="640"
+          height="360"
+          data-processing-sources="../Processing/arm.pde"
+        ></canvas>
+
+        <!-- Área de logs -->
+        <pre id="log" class="log-panel"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/serial.js" defer></script>
+
+</body>
+</html>

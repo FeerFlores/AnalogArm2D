@@ -1,6 +1,9 @@
 # Analog Arm 2D
 
 A project that uses an analog joystick connected to a **Dual MCU** to control a 2D two-segment arm in Processing. The joystick’s X/Y position not only moves the arm but also dynamically changes the background color of the window.
+<div align="center">
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/zG9ymHgw/brazo-robotico.gif' border='0' alt='brazo-robotico' width="200px"/></a>
+</div>
 
 ---
 

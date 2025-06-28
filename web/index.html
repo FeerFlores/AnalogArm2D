@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Analogic Arm 2D</title>
+  <title>Analog Arm 2D</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/arm.css">
   <script src="https://cdn.jsdelivr.net/gh/processing-js/processing-js@master/processing.min.js"></script>
@@ -13,16 +13,19 @@
     <div class="left-panel">
       <h1 align="center">Dual MCU + Joystick</h1>
       <p>
-        Este proyecto muestra un sketch de Processing donde se visualiza en
-        tiempo real el movimiento de un brazo según la posición del joystick
-        conectado a la tarjeta de desarrollo Dual MCU.
+        This project shows a Processing sketch that visualizes, in real time,
+        the movement of a two-segment arm according to the position of a joystick
+        connected to the Dual MCU development board.
       </p>
-      <div class="gif-caption">🎞️ Demostración visual del modelo girando</div>
+      <div class="gif-container">
+        <img src="img/demo.gif" alt="Demo GIF" width="260"/>
+      </div>
+      <div class="gif-caption">🎞️ Visual demonstration of the model rotating</div>
     </div>
 
     <div class="right-panel">
-      <h2>Interfaz en Vivo</h2>
-      <button id="btnConnect">Conectar Serial</button>
+      <h2>Live Interface</h2>
+      <button id="btnConnect">Connect Serial</button>
 
       <div class="viewer-card">
         <canvas id="canvas1" width="640" height="360" data-processing-sources="arm.pde"></canvas>
